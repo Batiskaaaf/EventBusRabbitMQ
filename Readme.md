@@ -17,9 +17,9 @@ You need either:
 
 1. Register EventBusRabbitMq (see EventBusTest Program.cs line 39).
 
-    1.1 HostName for ConnectionFactory in our case is localhost
+    2.1 HostName for ConnectionFactory in our case is localhost
     
-    1.2 ClientName for EventBusRabbitMQ the name of your service
+    2.2 ClientName for EventBusRabbitMQ the name of your service
         ex. (PingService, Aggregator, Authorization)
 
 ## Publishing an event
