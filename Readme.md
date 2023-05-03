@@ -2,8 +2,6 @@
 
 This project was borrowed from [MSDN eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).
 
-For a better undestanding check out [simple implemintation](https://github.com/Batiskaaaf/EventBusRabbitMQ).
-
 ## For EventBus to run
 
 You need either: 
