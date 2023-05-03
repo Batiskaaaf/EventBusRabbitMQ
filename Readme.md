@@ -15,9 +15,8 @@ You need either:
 
 1. Add references to the EventBus and EventBusRabbitMQ libraries.
 
-1. Register EventBusRabbitMq (see EventBusTest Program.cs line 39)
+1. Register EventBusRabbitMq (see EventBusTest Program.cs line 39).
     1.1 HostName for ConnectionFactory in our case is localhost
-        if running in Kubernetes or Docker, change it
     1.2 ClientName for EventBusRabbitMQ the name of your service
         ex. (PingService, Aggregator, Authorization)
 
