@@ -2,7 +2,7 @@
 
 This project was borrowed from [MSDN eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).
 
-For better understending checkout this [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ)
+For better understending checkout this [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj)
 
 ## For EventBus to run
 
