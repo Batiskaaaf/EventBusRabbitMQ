@@ -18,7 +18,7 @@ You need either:
 
 1. Add references to the EventBus and EventBusRabbitMQ libraries.
 
-1. Register EventBusRabbitMq (see EventBusTest Program.cs line 39).
+1. Register EventBusRabbitMq (see [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj) Program.cs line 39).
 
     2.1 HostName for ConnectionFactory in our case is localhost.
     
@@ -27,24 +27,24 @@ You need either:
 
 ## Publishing an event
 
-1. Create a record "CustomEvent" (not a class) inherited from "BaseEvent". (see  EventBusTest Evets)
+1. Create a record "CustomEvent" (not a class) inherited from "BaseEvent". (see  [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj) Evets)
 
     1.1 The "CustomEvent" record is stored in the folder of your service, there is no need to change the BuildingBlocks folder.
 
-2. Using DI, get the IEventBus service. (see EventBusTest SendController.cs line 19)
+2. Using DI, get the IEventBus service. (see [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj) SendController.cs line 19)
 
-3. Publish your event. (see EventBusTest SendController.cs line 32)
+3. Publish your event. (see [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj) SendController.cs line 32)
 
 All subscribed services received our event.
 
 ## Subscribing on event
 
 1. Create "CustomEventHandler<T>" inherited from IIntegrationEventHandler<T>
-    where T is the event we want to listen to. Implement Handle as needed. (see EventBusTest CustomEventsHandler)
+    where T is the event we want to listen to. Implement Handle as needed. (see [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj) CustomEventsHandler)
 
-2. Register "CustomEventHandler" in DI. (see EventBusTest Program.cs line 63)
+2. Register "CustomEventHandler" in DI. (see [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj) Program.cs line 63)
 
-3. Configure subscriptions. (see EventBusTest Program.cs line 71)
+3. Configure subscriptions. (see [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj) Program.cs line 71)
 
     3.1 The Subscribe<T, TH> method where T is the event we want to listen to, and Th is the handler that will handle it.
 
