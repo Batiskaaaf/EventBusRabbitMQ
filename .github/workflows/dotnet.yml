@@ -6,27 +6,26 @@ name: .net UnitTests
 on:
   push:
     branches: [ "main" ]
+    
+    paths:
+    - src/**
+    - Tests/EventBus.Tests/**
+    
   pull_request:
     branches: [ "main" ]
+        
+    paths:
+    - src/**
+    - Tests/EventBus.Tests/**
 
 jobs:
-  build:
-
+  BuildProjectForLinux:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Setup .NET 7
-      uses: actions/setup-dotnet@v3
+    - name: Checkout code
+      uses: actions/checkout@v3  
+    - uses: ./.github/workflows/composite/build-test
       with:
-        dotnet-version: 7.0.x
-        
-    - name: Restore dependencies
-      run: cd  Tests/EventBus.Tests && dotnet restore
-      
-    - name: Build
-      run: cd  Tests/EventBus.Tests && dotnet build --no-restore
-      
-    - name: Test
-      run: cd  Tests/EventBus.Tests && dotnet test --no-build --verbosity normal
+        dotnet_version: 7.0.x
+        project_path: src/EventBus
+        tests_path: Tests/EventBus.Tests
