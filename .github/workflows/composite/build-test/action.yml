@@ -29,5 +29,6 @@ runs:
       dotnet build --no-restore
       cd -
       cd ${{ inputs.tests_path }}
+      dotnet restore
       dotnet build --no-restore
       dotnet test --no-build -v=normal
