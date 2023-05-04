@@ -42,7 +42,7 @@ All subscribed services received our event.
 1. Create "CustomEventHandler<T>" inherited from IIntegrationEventHandler<T>
     where T is the event we want to listen to. Implement Handle as needed. (see [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj) CustomEventsHandler)
 
-2. Register "CustomEventHandler" in DI. (see [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj) Program.cs line 63)
+2. Register "CustomEventHandler" in DI (see [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj) Program.cs line 63)
 
 3. Configure subscriptions. (see [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj) Program.cs line 71)
 
