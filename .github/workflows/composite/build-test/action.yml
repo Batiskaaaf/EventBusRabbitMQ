@@ -7,10 +7,10 @@ inputs:
     description: "Version of dotnet to use for testing"
     required: true
   project_path:
-    description: "Path to project to test e.g. Services/Catalog/Catalog.API"
+    description: "Path to project to test e.g. src/EventBus"
     required: true
   tests_path:
-    description: "Path to test project e.g. Services/Catalog/Catalog.UnitTests"
+    description: "Path to test project e.g. Tests/EventBus.Test"
     required: true
 
 runs:
@@ -24,7 +24,6 @@ runs:
   - name: Build and run unit tests
     shell: bash
     run: |
-      cd src
       cd ${{ inputs.project_path }}
       dotnet restore
       dotnet build --no-restore
