@@ -27,7 +27,7 @@ You need either:
 
 ## Publishing an event
 
-1. Create a record "CustomEvent" (not a class) inherited from "BaseEvent". (see  [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj) Evets)
+1. Create a record "CustomEvent" (not a class) inherited from "BaseEvent". (see  [simple implemination](https://github.com/Batiskaaaf/EventBusRabbitMQ/tree/main/Tests/EventBusTestProj) CustomEvets)
 
     1.1 The "CustomEvent" record is stored in the folder of your service, there is no need to change the BuildingBlocks folder.
 
